@@ -1,0 +1,218 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+body {
+  background-color: #222; }
+
+h1 {
+  font-weight: bolder;
+  font-size: 2em;
+  color: #f0f0f0;
+  font-family: Nunito; }
+
+#nav_check {
+  display: none; }
+
+#burger_menu {
+  background-color: #01595b;
+  border: none;
+  color: #f0f0f0;
+  margin-left: 10px;
+  font-size: 1.5em; }
+
+.main_nav {
+  display: flex;
+  box-sizing: border-box;
+  position: absolute;
+  background-color: #01595b;
+  z-index: 1;
+  width: 100vw;
+  padding: 40px;
+  padding-bottom: 10px;
+  transition: transform 200ms linear;
+  transform: translateX(-100vw);
+  top: 50px; }
+
+#nav_check:checked ~ .main_nav {
+  transform: translateX(0); }
+
+.main_nav ul {
+  list-style: none; }
+
+.main_nav li {
+  height: 50px; }
+
+.main_nav li a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-family: Lato;
+  text-transform: uppercase;
+  transition: 400ms; }
+
+.main_header {
+  background-color: #01595b;
+  display: flex;
+  height: 50px;
+  width: 100vw;
+  position: relative; }
+
+.main_header h1 {
+  padding: 0 10px;
+  align-self: center;
+  justify-content: flex-end; }
+
+.section_title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2em; }
+
+.bio {
+  margin: 20px;
+  font-family: Lato;
+  color: #f0f0f0;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  position: relative; }
+
+#title_bio {
+  position: absolute;
+  left: 20px;
+  display: block; }
+
+#foto_bio {
+  width: 300px;
+  min-width: 300px; }
+
+#texto_bio {
+  align-self: center;
+  width: 50vw;
+  margin-left: 10px; }
+
+.footer {
+  background-color: #01595b;
+  height: 300px;
+  color: #f0f0f0;
+  font-family: Lato; }
+
+@media (min-width: 768px) {
+  .main_nav ul {
+    list-style: none;
+    flex-direction: row; }
+  .main_nav li {
+    display: inline;
+    height: 50px; }
+  .main_nav li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-family: Lato;
+    font-weight: bold;
+    padding: 10px 30px;
+    transition: 400ms; }
+  .main_nav li a:hover {
+    background-color: #01C68B;
+    color: #222; }
+  .main_header {
+    background-color: #01595b;
+    padding: 10px;
+    display: flex;
+    height: 50px; }
+  .main_header h1 {
+    padding: 0 10px; }
+  .main_header .main_nav {
+    margin-left: 30px;
+    width: 100vw; }
+  .main_nav {
+    display: flex;
+    position: inherit;
+    align-self: center;
+    padding: 10px;
+    transform: translateX(0);
+    top: 0; }
+  #burger_menu {
+    display: none; } }
