@@ -9,19 +9,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header class="main_header">
+        <button type="button" id="burger_menu">
+            <label for="nav_check">
+                <i class="fas fa-bars"></i>
+            </label>
+        </button>
         <h1 class="title">Derek</h1>
-        <nav class="main_nav">
-            <a href="#">Bio</a>
-            <a href="#">Pixel Art</a>
-            <a href="#">Edición</a>
-            <a href="#">Subtitulado</a>
-            <a href="#">Contacto</a>
+        <input type="checkbox" id="nav_check">
+        <nav class="main_nav" aria-label="Primary navigation">
+            <ul>
+                <li><a href="#">Bio</a></li>
+                <li><a href="#">Pixel Art</a></li>
+                <li><a href="#">Edición</a></li>
+                <li><a href="#">Subtitulado</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
         </nav>
     </header>
     <div class="bio">
+        <h2 class="section_title" id="title_bio">Bio</h2>
         <img src="/img/foto_bio.jpg" alt="foto" id="foto_bio">
         <p id="texto_bio">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla consectetur voluptatum quisquam praesentium, maxime veniam impedit pariatur laboriosam harum nostrum iure esse, facilis aliquid. Quod voluptatibus officia alias tempora eos!</p>
     </div>
