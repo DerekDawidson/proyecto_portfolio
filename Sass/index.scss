@@ -132,7 +132,6 @@ h1 {
         width: 100vh;
         box-sizing: border-box;
         display: flex;
-        transition: 400ms;
 
         a {
             color: #f0f0f0;
@@ -164,13 +163,6 @@ h1 {
     box-sizing: border-box;
 }
 
-.section_title {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 2em;
-    box-sizing: border-box;
-}
-
 .bio {
     margin: 20px;
     font-family: Lato;
@@ -195,6 +187,10 @@ h1 {
     top: 10px;
     display: block;
     color: #222;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2em;
+    box-sizing: border-box;
 }
 
 #foto_bio {
@@ -219,8 +215,6 @@ h1 {
     box-sizing: border-box;
 }
 
-
-
 @media (min-width: 768px) {
     h1 {
         padding: 0 10px;
@@ -228,23 +222,20 @@ h1 {
 
     .main_header {
         background-color: #01595b;
-        padding: 10px;
         display: flex;
-        height: 50px;
-    }
-
-    .main_header .main_nav {
-        margin-left: 30px;
-        width: 100vw;
+        height: 70px;
     }
 
     .main_nav {
         display: flex;
         position: inherit;
         align-self: center;
-        padding: 10px;
         transform: translateX(0);
         top: 0;
+        margin-left: 30px;
+        width: 100vw;
+        height: 100%;
+        padding-bottom: 0;
 
         ul {
             list-style: none;
@@ -252,8 +243,10 @@ h1 {
         }
 
         li {
-            display: inline;
-            height: 50px;
+            display: inline-flex;
+            height: 100%;
+            width: auto;
+            align-self: center;
         }
 
         a {
@@ -263,24 +256,46 @@ h1 {
             font-weight: bold;
             padding: 10px 30px;
             transition: 400ms;
+            height: 100%;
         }
     }
 
     .main_nav li a:hover {
         background-color: #01C68B;
         color: #222;
+    }
 
-        #burger_menu {
-            display: none;
-        }
+    #burger_menu {
+        display: none;
+    }
 
-        #foto_bio {
-            display: inline;
-            max-width: 300px;
-        }
+    #foto_bio {
+        display: inline;
+        width: 30vw;
+    }
 
-        .bio {
-            background-image: none;
-        }
+    #texto_bio {
+        background-color: none;
+        color: #f0f0f0;
+        width: 50vw;
+        align-self: center;
+    }
+
+    .bio {
+        background-image: none;
+        background-color: #222;
+        font-size: 2em;
+        height: fit-content;
+        color: #f0f0f0;
+        display: flex;
+        padding-bottom: 0;
+    }
+
+    #title_bio {
+        color: #f0f0f0;
+    }
+
+    .main_nav li:active {
+        background-color: #01595b;
     }
 }
