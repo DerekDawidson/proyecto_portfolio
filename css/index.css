@@ -86,14 +86,15 @@ video {
   font: inherit;
   vertical-align: baseline; }
 
-body {
-  background-color: #222; }
-
 h1 {
   font-weight: bolder;
   font-size: 2em;
   color: #f0f0f0;
-  font-family: Nunito; }
+  font-family: Nunito;
+  padding: 0 10px;
+  align-self: center;
+  justify-content: flex-end;
+  box-sizing: border-box; }
 
 #nav_check {
   display: none; }
@@ -103,7 +104,8 @@ h1 {
   border: none;
   color: #f0f0f0;
   margin-left: 10px;
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  box-sizing: border-box; }
 
 .main_nav {
   display: flex;
@@ -112,29 +114,33 @@ h1 {
   background-color: #01595b;
   z-index: 1;
   width: 100vw;
-  padding: 40px;
   padding-bottom: 10px;
   transition: transform 200ms linear;
   transform: translateX(-100vw);
   top: 50px; }
+  .main_nav ul {
+    list-style: none; }
+  .main_nav li {
+    height: 50px;
+    width: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    transition: 400ms; }
+    .main_nav li a {
+      color: #f0f0f0;
+      text-decoration: none;
+      font-family: Lato;
+      text-transform: uppercase;
+      transition: 400ms;
+      box-sizing: border-box;
+      align-self: center;
+      margin-left: 40px; }
 
 #nav_check:checked ~ .main_nav {
   transform: translateX(0); }
 
-.main_nav ul {
-  list-style: none; }
-
-.main_nav li {
-  height: 50px;
-  box-sizing: border-box; }
-
-.main_nav li a {
-  color: #f0f0f0;
-  text-decoration: none;
-  font-family: Lato;
-  text-transform: uppercase;
-  transition: 400ms;
-  box-sizing: border-box; }
+.main_nav li:active {
+  background-color: #01C68B; }
 
 .main_header {
   background-color: #01595b;
@@ -142,12 +148,6 @@ h1 {
   height: 50px;
   position: relative;
   justify-content: space-between;
-  box-sizing: border-box; }
-
-.main_header h1 {
-  padding: 0 10px;
-  align-self: center;
-  justify-content: flex-end;
   box-sizing: border-box; }
 
 .section_title {
@@ -160,25 +160,37 @@ h1 {
   margin: 20px;
   font-family: Lato;
   color: #f0f0f0;
-  font-size: 1.5em;
   display: flex;
   justify-content: center;
   position: relative;
   flex-wrap: wrap;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background-image: url(../img/foto_bio.jpg);
+  margin: 0;
+  padding: 0;
+  background-size: contain;
+  height: calc((1670*100vw)/1365);
+  width: 100vw;
+  padding-bottom: 20px; }
 
 #title_bio {
   position: absolute;
   left: 20px;
-  display: block; }
+  top: 10px;
+  display: block;
+  color: #222; }
 
 #foto_bio {
-  max-width: 300px; }
+  display: none; }
 
 #texto_bio {
-  align-self: center;
-  width: 50vw;
-  margin-left: 10px; }
+  align-self: flex-end;
+  background-color: rgba(34, 34, 34, 0.75);
+  padding: 0 15px;
+  box-sizing: border-box;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.25em; }
 
 .footer {
   background-color: #01595b;
@@ -188,29 +200,13 @@ h1 {
   box-sizing: border-box; }
 
 @media (min-width: 768px) {
-  .main_nav ul {
-    list-style: none;
-    flex-direction: row; }
-  .main_nav li {
-    display: inline;
-    height: 50px; }
-  .main_nav li a {
-    color: #f0f0f0;
-    text-decoration: none;
-    font-family: Lato;
-    font-weight: bold;
-    padding: 10px 30px;
-    transition: 400ms; }
-  .main_nav li a:hover {
-    background-color: #01C68B;
-    color: #222; }
+  h1 {
+    padding: 0 10px; }
   .main_header {
     background-color: #01595b;
     padding: 10px;
     display: flex;
     height: 50px; }
-  .main_header h1 {
-    padding: 0 10px; }
   .main_header .main_nav {
     margin-left: 30px;
     width: 100vw; }
@@ -221,5 +217,26 @@ h1 {
     padding: 10px;
     transform: translateX(0);
     top: 0; }
-  #burger_menu {
-    display: none; } }
+    .main_nav ul {
+      list-style: none;
+      flex-direction: row; }
+    .main_nav li {
+      display: inline;
+      height: 50px; }
+    .main_nav a {
+      color: #f0f0f0;
+      text-decoration: none;
+      font-family: Lato;
+      font-weight: bold;
+      padding: 10px 30px;
+      transition: 400ms; }
+  .main_nav li a:hover {
+    background-color: #01C68B;
+    color: #222; }
+    .main_nav li a:hover #burger_menu {
+      display: none; }
+    .main_nav li a:hover #foto_bio {
+      display: inline;
+      max-width: 300px; }
+    .main_nav li a:hover .bio {
+      background-image: none; } }
