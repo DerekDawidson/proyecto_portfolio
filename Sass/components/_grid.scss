@@ -1,0 +1,28 @@
+@import "../abstracts/mixins";
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 10px;
+    row-gap: 10px;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 50vh;
+    margin: 0 auto;
+    @include tablet-media {
+        grid-template-columns: auto auto auto auto;
+        column-gap: 30px;
+    }
+}
+
+.grid-item {
+    border: none;
+    padding: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    img {
+        -webkit-filter: drop-shadow(2px 2px 2px #222);
+        filter: drop-shadow(2px 2px 2px #222);
+    }
+}

@@ -1,9 +1,7 @@
 @import "../abstracts/mixins";
 
-.bio {
+#bio {
     margin: 20px;
-    font-family: Lato;
-    color: #f0f0f0;
     display: flex;
     justify-content: center;
     position: relative;
@@ -30,19 +28,10 @@
 }
 
 #title_bio {
+    @include title-style;
     position: absolute;
     left: 20px;
     top: 10px;
-    display: block;
-    color: #222;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 2em;
-    box-sizing: border-box;
-
-    @include tablet-media {
-        color: #f0f0f0;
-    }
 }
 
 #foto_bio {
@@ -63,10 +52,11 @@
     text-align: justify;
     text-justify: inter-word;
     font-size: 1.25em;
+    font-family: Lato;
+    color: #f0f0f0;
 
     @include tablet-media {
         background-color: none;
-        color: #f0f0f0;
         max-width: 50vw;
         align-self: center;
     }

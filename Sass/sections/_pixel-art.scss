@@ -1,0 +1,15 @@
+@import "../abstracts/mixins";
+
+#pixel-art {
+    background-color: #01595b;
+    position: relative;
+}
+
+#title_pixel-art {
+    @include title-style;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+@import "../components/grid";

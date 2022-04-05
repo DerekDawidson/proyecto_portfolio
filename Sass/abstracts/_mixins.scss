@@ -14,3 +14,16 @@ $desktopXL: 1200px;
         @content;
     }
 }
+
+@mixin title-style {
+    color: #222;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2em;
+    font-family: Lato;
+    display: block;
+
+    @include tablet-media {
+        color: #f0f0f0;
+    }
+}

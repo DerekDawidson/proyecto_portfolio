@@ -20,7 +20,6 @@
 .main_nav {
     display: flex;
     box-sizing: border-box;
-    position: absolute;
     background-color: #01595b;
     z-index: 1;
     width: 100vw;
@@ -28,6 +27,7 @@
     transition: transform 200ms linear;
     transform: translateX(-100vw);
     top: 50px;
+    position: fixed;
 
     @include tablet-media {
         display: flex;

@@ -2,9 +2,10 @@
 @import "./abstracts/reset";
 @import "./sections/bio";
 @import "./components/main-nav";
+@import "./sections/pixel-art";
 
 .footer {
-    background-color: #01595b;
+    background-color: #222;
     height: 300px;
     color: #f0f0f0;
     font-family: Lato;
