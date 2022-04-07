@@ -1,8 +1,13 @@
 @import "../abstracts/mixins";
 
 #pixel-art {
+    box-sizing: border-box;
     background-color: #01595b;
     position: relative;
+    padding-top: 70px;
+    @include tablet-media{
+        padding: 20px;
+    }
 }
 
 #title_pixel-art {

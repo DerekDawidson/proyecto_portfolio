@@ -4,20 +4,20 @@
     display: grid;
     grid-template-columns: auto auto;
     column-gap: 10px;
-    row-gap: 10px;
+    row-gap: 20px;
     box-sizing: border-box;
     padding: 20px;
-    width: 50vh;
+    width: calc(max(50vw, 270px));
     margin: 0 auto;
     @include tablet-media {
         grid-template-columns: auto auto auto auto;
         column-gap: 30px;
+        row-gap: 10px;
     }
 }
 
 .grid-item {
     border: none;
-    padding: 20px;
     display: flex;
     align-items: flex-end;
     justify-content: center;

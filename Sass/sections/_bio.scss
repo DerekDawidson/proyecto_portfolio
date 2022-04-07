@@ -1,29 +1,62 @@
 @import "../abstracts/mixins";
 
 #bio {
-    margin: 20px;
     display: flex;
     justify-content: center;
     position: relative;
     flex-wrap: wrap;
     box-sizing: border-box;
-    background-image: url(../img/foto_bio.jpg);
     margin: 0;
     padding: 0;
     background-size: contain;
-    height: calc((1670*100vw)/1365);
-    width: 100vw;
-    padding-bottom: 20px;
-
-    @include tablet-media {
-        background-image: none;
-        background-color: #222;
-        font-size: 2em;
-        height: fit-content;
-        color: #f0f0f0;
-        display: flex;
-        padding-bottom: 0;
-        flex-wrap: wrap;
+    width: 100%;
+    background-color: #222;
+    #figurefigure {
+        position: relative;
+        height: calc((1670*95vw)/1365);
+        text-align: center;
+        overflow-y: hidden;
+        .figure_bio__container {
+            display: inline-block;
+            height: 95%;
+            #figure_bio {
+                max-width: 100%;
+            }
+        }
+        #caption_bio {
+            display: block;
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            background-color: rgba($color: #222, $alpha: .75);
+            color: #f0f0f0;
+            width: 100%;
+            font-family: lato;
+            font-size: 1.25em;
+        }
+        @include tablet-media {
+            background-color: #222;
+            color: #f0f0f0;
+            display: flex;
+            height: auto;
+            max-width: 1200px;
+            margin-inline: auto;
+            margin-bottom: -3px;
+            .figure_bio__container {
+                height: auto;
+                max-width: 50vw;
+            }
+            #caption_bio {
+                position: initial;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: left;
+                padding-left: 30px;
+                font-size: 2em;
+                letter-spacing: .075em;
+            }
+        }
     }
 }
 
@@ -32,18 +65,10 @@
     position: absolute;
     left: 20px;
     top: 10px;
+    z-index: 99;
 }
 
-#foto_bio {
-    display: none;
-
-    @include tablet-media {
-        display: inline-block;
-        max-height: 100%;
-        max-width: 300px;
-    }
-}
-
+/*
 #texto_bio {
     align-self: flex-end;
     background-color: rgba($color: #222, $alpha: .75);
@@ -60,4 +85,4 @@
         max-width: 50vw;
         align-self: center;
     }
-}
+}*/
